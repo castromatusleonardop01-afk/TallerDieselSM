@@ -1,4 +1,3 @@
-
 :root {
     --bg-main: #F9F8F6;       
     --bg-alt: #EFE9E3;        
@@ -161,7 +160,7 @@ body {
     width: 50px;
     height: 50px;
     object-fit: cover;
-    border-radius: 8px; 
+    border-radius: 50%; 
     border: 2px solid var(--accent-color); 
 }
 
@@ -316,36 +315,56 @@ body {
     font-size: 0.9rem;
 }
 
-/* 7. SECCIÓN DE GALERÍA */
+/* 7. SECCIÓN DE GALERÍA (NUEVO CARRUSEL) */
 .gallery-section {
     padding: 80px 0;
     background-color: var(--bg-main);
 }
 
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.gallery-item {
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-    background-color: var(--bg-alt);
-    border: 3px solid var(--bg-navbar);
-}
-
-.gallery-item img {
+.carousel-container {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.4s ease;
+    overflow: hidden; 
 }
 
-.gallery-item:hover img {
-    transform: scale(1.05);
+.carousel-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding-bottom: 20px; 
+    /* Estilos para la barra de desplazamiento en navegadores modernos */
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-color) var(--bg-alt);
+}
+
+/* Personalización de la barra de desplazamiento para Chrome/Safari */
+.carousel-track::-webkit-scrollbar {
+    height: 10px;
+}
+.carousel-track::-webkit-scrollbar-track {
+    background: var(--bg-alt);
+    border-radius: 5px;
+}
+.carousel-track::-webkit-scrollbar-thumb {
+    background-color: var(--accent-color);
+    border-radius: 5px;
+}
+
+.carousel-img {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 500px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    scroll-snap-align: center;
+    border: 3px solid var(--bg-navbar);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease;
+}
+
+.carousel-img:hover {
+    transform: scale(1.02);
 }
 
 /* 8. SECCIÓN NOSOTROS */
@@ -515,7 +534,7 @@ body {
     .grid-3, .services-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    .grid-2, .gallery-grid {
+    .grid-2 {
         grid-template-columns: 1fr;
         gap: 30px;
     }
@@ -547,5 +566,10 @@ body {
     }
     .highlights {
         margin-top: 20px;
+    }
+    /* El carrusel se adapta en móviles para mostrar un poco de la siguiente imagen */
+    .carousel-img {
+        max-width: 85vw;
+        height: 300px;
     }
 }
