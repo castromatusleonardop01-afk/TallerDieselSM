@@ -3,260 +3,480 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taller Diesel S.M - Especialistas en Mecánica Diésel</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Taller Diesel S.M. | Mecánica diésel en La Paz, B.C.S.</title>
+    <meta name="description" content="Taller especializado en motores diésel de camiones y vehículos de carga en La Paz, Baja California Sur. Reparación de motores, transmisiones, diferenciales, diagnóstico por computadora y rescate carretero. Garantía por escrito.">
+    <meta name="theme-color" content="#2A1F17">
+    <link rel="icon" href="./logo.png" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AutoRepair",
+        "name": "Taller Diesel S.M.",
+        "image": "https://tallerdiesel-sm.onrender.com/camionportada.jpeg",
+        "logo": "https://tallerdiesel-sm.onrender.com/logo.png",
+        "url": "https://tallerdiesel-sm.onrender.com",
+        "telephone": "+52 1 612 217 9060",
+        "email": "Taniamatuz19@gmail.com",
+        "foundingDate": "2019",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Calle Balsamina entre Calle Caddebi, Col. La Pitahaya",
+            "addressLocality": "La Paz",
+            "addressRegion": "B.C.S.",
+            "postalCode": "23089",
+            "addressCountry": "MX"
+        },
+        "geo": { "@type": "GeoCoordinates", "latitude": 24.07088483466293, "longitude": -110.32552189088518 },
+        "openingHoursSpecification": [{
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+            "opens": "08:00",
+            "closes": "18:00"
+        }]
+    }
+    </script>
 </head>
 <body>
 
-    <header class="navbar">
+    <!-- ============ NAVEGACIÓN ============ -->
+    <header class="navbar" id="navbar">
         <div class="container nav-container">
-            <div class="logo">
-                <span>Taller Diesel <strong>S.M</strong></span>
-                <img src="./logo.png" alt="Logo Taller Diesel S.M" class="logo-img">
-            </div>
-            <nav class="nav-menu">
-                <a href="#inicio">Inicio</a>
+            <a href="#inicio" class="brand" aria-label="Taller Diesel S.M., ir al inicio">
+                <img src="./logo.png" alt="" class="brand-logo" width="48" height="48">
+                <span class="brand-text">Taller Diesel <strong>S.M.</strong></span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
                 <a href="#servicios">Servicios</a>
-                <a href="#galeria">Galería</a>
+                <a href="#proceso">Cómo trabajamos</a>
+                <a href="#rescate">Rescate</a>
                 <a href="#nosotros">Nosotros</a>
+                <a href="#galeria">Galería</a>
                 <a href="#contacto">Contacto</a>
-            </nav>
-            <div class="nav-cta">
-                <a href="https://wa.me/5216122179060" target="_blank" class="btn btn-primary">
-                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                <a href="https://wa.me/5216122179060" target="_blank" rel="noopener" class="btn btn-primary nav-cta">
+                    <i class="fa-brands fa-whatsapp"></i> Cotizar
                 </a>
-            </div>
+            </nav>
         </div>
     </header>
 
-    <section id="inicio" class="hero" style="background-image: linear-gradient(rgba(249, 248, 246, 0.85), rgba(249, 248, 246, 0.92)), url('./camionportada.jpeg');">
+    <main>
+
+    <!-- ============ HERO ============ -->
+    <section id="inicio" class="hero">
+        <div class="hero-bg" aria-hidden="true"></div>
         <div class="container hero-content">
-            <span class="badge">Desde 2019 en La Paz, B.C.S.</span>
-            <h1>Fuerza y Precisión para tu Motor Diésel</h1>
-            <p>Especialistas en reparación de motores, transmisiones y sistemas hidráulicos con más de 17 años de experiencia liderando el camino.</p>
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <i class="fa-solid fa-shield-halved accent-color"></i>
-                    <span><strong>Garantía:</strong> 3 meses o 25,000 km</span>
-                </div>
-            </div>
+            <span class="eyebrow"><i class="fa-solid fa-sun"></i> Desde 2019 en La Paz, B.C.S.</span>
+            <h1>Diagnóstico honesto,<br><span>motor confiable.</span></h1>
+            <p class="hero-lead">
+                Especialistas en motores diésel de rango medio a pesado: camiones, flotillas y vehículos de carga.
+                También atendemos particulares con motor diésel.
+            </p>
             <div class="hero-buttons">
-                <a href="#contacto" class="btn btn-primary btn-lg">Ubicación y Contacto</a>
-                <a href="#servicios" class="btn btn-secondary btn-lg">Ver Servicios</a>
+                <a href="https://wa.me/5216122179060" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+                    <i class="fa-brands fa-whatsapp"></i> Cotiza por WhatsApp
+                </a>
+                <a href="#contacto" class="btn btn-ghost btn-lg">
+                    <i class="fa-solid fa-location-dot"></i> Cómo llegar
+                </a>
             </div>
         </div>
-    </section>
 
-    <section class="highlights">
-        <div class="container grid-3">
-            <div class="highlight-card">
-                <div class="icon-box"><i class="fa-solid fa-wrench"></i></div>
-                <h3>17 Años de Experiencia</h3>
-                <p>Nuestro líder mecánico cuenta con casi dos décadas de trayectoria resolviendo fallas complejas.</p>
-            </div>
-            <div class="highlight-card">
-                <div class="icon-box"><i class="fa-solid fa-certificate"></i></div>
-                <h3>Garantía Asegurada</h3>
-                <p>Respaldamos la calidad de nuestra mano de obra y refacciones con una sólida garantía de 6 meses o 20,000 km.</p>
-            </div>
-            <div class="highlight-card">
-                <div class="icon-box"><i class="fa-solid fa-truck-field-unpaved"></i></div>
-                <h3>Rescates Carreteros</h3>
-                <p>¿Te quedaste varado? Acudimos en tu auxilio con nuestro servicio de rescate carretero.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="servicios" class="services-section">
         <div class="container">
-            <div class="section-header">
-                <h2>Nuestros Servicios Especializados</h2>
-                <p>Soluciones integrales para mantener tus unidades de carga y vehículos diésel operando al 100%.</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <i class="fa-solid fa-gears service-icon"></i>
-                    <h3>Reparación de Motores</h3>
-                    <p>Diagnóstico completo, ajuste y reconstrucción total de motores diésel de alta exigencia.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fa-solid fa-truck-monster service-icon"></i>
-                    <h3>Reparación de Transmisiones</h3>
-                    <p>Mantenimiento preventivo y correctivo para cajas de velocidades manuales y automáticas.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fa-solid fa-bolt-lightning service-icon"></i>
-                    <h3>Servicios Eléctricos</h3>
-                    <p>Detección y reparación de cortos, alternadores, marchas y cableado general.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fa-solid fa-laptop-code service-icon"></i>
-                    <h3>Diagnóstico por Computadora</h3>
-                    <p>Lectura de códigos de falla con escáner avanzado para identificar problemas precisos.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fa-solid fa-wind service-icon"></i>
-                    <h3>Sistema de Aire</h3>
-                    <p>Revisión y mantenimiento de frenos de aire, compresores y líneas neumáticas.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fa-solid fa-oil-can service-icon"></i>
-                    <h3>Sistema de Hidráulica</h3>
-                    <p>Reparación de mangueras, pistones, bombas e hidráulica aplicada al transporte.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fa-solid fa-truck-ramp-box service-icon"></i>
-                    <h3>Reparación de Diferenciales</h3>
-                    <p>Ajuste de coronas, piñones y cambio de baleros para garantizar tracción.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fa-solid fa-droplet service-icon"></i>
-                    <h3>Cambio de Aceite y Filtros</h3>
-                    <p>Servicio básico express con lubricantes de alta viscosidad ideales para motores diésel.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fa-solid fa-check-double service-icon"></i>
-                    <h3>Servicio General</h3>
-                    <p>Inspección multipuntos completa para prevención de fallas antes de salir a carretera.</p>
-                </div>
-            </div>
+            <ul class="stats">
+                <li>
+                    <strong>17</strong>
+                    <span>años de experiencia de nuestro maestro mecánico</span>
+                </li>
+                <li>
+                    <strong>3 meses</strong>
+                    <span>de garantía en mano de obra, por escrito</span>
+                </li>
+                <li>
+                    <strong>356 km</strong>
+                    <span>de radio para rescate carretero</span>
+                </li>
+                <li>
+                    <strong>11</strong>
+                    <span>unidades atendidas al mismo tiempo</span>
+                </li>
+            </ul>
         </div>
     </section>
 
-    <section id="galeria" class="gallery-section">
+    <!-- ============ SERVICIOS ============ -->
+    <section id="servicios" class="section services">
         <div class="container">
-            <div class="section-header">
-                <h2>Galería</h2>
-            </div>
-            
-            <div class="carousel-container">
-                <div class="carousel-track">
-                    <img src="./WhatsApp Image 2026-06-09 at 3.37.50 PM (1).jpeg" alt="Trabajo en Taller 1" class="carousel-img">
-                    <img src="./WhatsApp Image 2026-06-09 at 3.37.50 PM (2).jpeg" alt="Trabajo en Taller 2" class="carousel-img">
-                    <img src="./WhatsApp Image 2026-06-09 at 3.37.50 PM.jpeg" alt="Trabajo en Taller 3" class="carousel-img">
-                    <img src="./WhatsApp Image 2026-06-09 at 3.37.51 PM (1).jpeg" alt="Trabajo en Taller 4" class="carousel-img">
-                    <img src="./WhatsApp Image 2026-06-09 at 3.37.51 PM (2).jpeg" alt="Trabajo en Taller 5" class="carousel-img">
-                    <img src="./WhatsApp Image 2026-06-09 at 3.37.51 PM (2).jpeg" alt="" class="carousel-img">
-                    <img src="./WhatsApp Image 2026-06-09 at 3.37.51 PM (3).jpeg" alt="" class="carousel-img">
-                    <img src="./WhatsApp Image 2026-06-09 at 3.37.51 PM (4).jpeg" alt="" class="carousel-img">
-                    <img src="./WhatsApp Image 2026-06-09 at 3.37.51 PM.jpeg" alt="" class="carousel-img">
-                    <img src="./WhatsApp Image 2026-06-09 at 3.37.52 PM (1).jpeg" alt="" class="carousel-img">
-                    <img src="./WhatsApp Image 2026-06-09 at 3.37.52 PM (2).jpeg" alt="" class="carousel-img">
-                    <img src="./WhatsApp Image 2026-06-09 at 3.37.52 PM (3).jpeg" alt="" class="carousel-img">
-                    <img src="./WhatsApp Image 2026-06-09 at 3.37.52 PM (4).jpeg" alt="" class="carousel-img">
-                    <img src="./WhatsApp Image 2026-06-09 at 3.37.52 PM.jpeg" alt="" class="carousel-img">
-                    <img src="./WhatsApp Image 2026-06-09 at 3.37.53 PM (1).jpeg" alt="" class="carousel-img">
-                    <img src="./WhatsApp Image 2026-06-09 at 3.37.53 PM (2).jpeg" alt="" class="carousel-img">
-                    <img src="./WhatsApp Image 2026-06-09 at 3.37.53 PM (3).jpeg" alt="" class="carousel-img">
-                    <img src="./WhatsApp Image 2026-06-09 at 3.37.53 PM (4).jpeg" alt="" class="carousel-img">
-                    <img src="./WhatsApp Image 2026-06-09 at 3.37.54 PM.jpeg" alt="" class="carousel-img">
-                    <img src="./WhatsApp Image 2026-06-09 at 3.37.54 PM (1).jpeg" alt="" class="carousel-img">
-                    <img src="./WhatsApp Image 2026-06-09 at 3.38.15 PM (3).jpeg" alt="" class="carousel-img">
-                    
-                    
-                </div>
+            <header class="section-head">
+                <span class="kicker">Servicios</span>
+                <h2>Todo lo que tu unidad diésel necesita</h2>
+                <p>Desde el mantenimiento preventivo hasta el cambio de motor. En el taller, a domicilio o en carretera.</p>
+            </header>
+
+            <div class="service-feature-grid">
+                <article class="service-feature">
+                    <img src="./WhatsApp%20Image%202026-06-09%20at%203.37.53%20PM.jpeg" alt="Bloque de motor diésel con pistones durante una reparación" loading="lazy">
+                    <div class="service-feature-body">
+                        <i class="fa-solid fa-gears"></i>
+                        <h3>Reparación y cambio de motor</h3>
+                        <p>Diagnóstico, ajuste, reconstrucción total o cambio de motor, siguiendo las especificaciones del fabricante.</p>
+                    </div>
+                </article>
+                <article class="service-feature">
+                    <img src="./WhatsApp%20Image%202026-06-09%20at%203.38.15%20PM.jpeg" alt="Engranes de una caja de transmisión abierta" loading="lazy">
+                    <div class="service-feature-body">
+                        <i class="fa-solid fa-gear"></i>
+                        <h3>Transmisiones</h3>
+                        <p>Mantenimiento preventivo y correctivo de cajas de velocidades, embragues y volantes.</p>
+                    </div>
+                </article>
+                <article class="service-feature">
+                    <img src="./WhatsApp%20Image%202026-06-09%20at%203.38.15%20PM%20(2).jpeg" alt="Diferencial de camión desmontado" loading="lazy">
+                    <div class="service-feature-body">
+                        <i class="fa-solid fa-truck-ramp-box"></i>
+                        <h3>Diferenciales</h3>
+                        <p>Ajuste de coronas y piñones, y cambio de baleros para recuperar la tracción.</p>
+                    </div>
+                </article>
+                <article class="service-feature">
+                    <img src="./WhatsApp%20Image%202026-06-09%20at%203.37.51%20PM%20(5).jpeg" alt="Computadora con software de diagnóstico para motor diésel" loading="lazy">
+                    <div class="service-feature-body">
+                        <i class="fa-solid fa-laptop-code"></i>
+                        <h3>Diagnóstico por computadora</h3>
+                        <p>Lectura de códigos de falla con escáner para cotizar solo lo que de verdad necesita tu unidad.</p>
+                    </div>
+                </article>
+                <article class="service-feature">
+                    <img src="./WhatsApp%20Image%202026-06-09%20at%203.37.52%20PM%20(2).jpeg" alt="Arnés de cableado eléctrico de camión" loading="lazy">
+                    <div class="service-feature-body">
+                        <i class="fa-solid fa-bolt"></i>
+                        <h3>Sistema eléctrico</h3>
+                        <p>Alternadores, marchas, cableado y detección de cortos.</p>
+                    </div>
+                </article>
+                <article class="service-feature">
+                    <img src="./WhatsApp%20Image%202026-06-09%20at%203.37.52%20PM%20(1).jpeg" alt="Enfriador de aceite de motor diésel" loading="lazy">
+                    <div class="service-feature-body">
+                        <i class="fa-solid fa-oil-can"></i>
+                        <h3>Aceite, filtros y servicio general</h3>
+                        <p>Cambio de aceite y filtros con lubricantes para diésel e inspección multipuntos antes de salir a carretera.</p>
+                    </div>
+                </article>
             </div>
 
+            <ul class="service-list">
+                <li><i class="fa-solid fa-wind"></i> Sistema de aire: frenos, compresores y líneas neumáticas</li>
+                <li><i class="fa-solid fa-droplet"></i> Sistema hidráulico: mangueras, pistones y bombas</li>
+                <li><i class="fa-solid fa-truck-pickup"></i> Rescate carretero</li>
+                <li><i class="fa-solid fa-soap"></i> Lavado de unidades</li>
+                <li><i class="fa-solid fa-calendar-check"></i> Paquete de mantenimiento preventivo</li>
+            </ul>
         </div>
     </section>
 
-    <section id="nosotros" class="about-section">
-        <div class="container grid-2">
+    <!-- ============ PROCESO ============ -->
+    <section id="proceso" class="section process">
+        <div class="container">
+            <header class="section-head">
+                <span class="kicker">Cómo trabajamos</span>
+                <h2>Sin sorpresas en la cuenta</h2>
+                <p>Así es el camino de tu unidad, desde que llega hasta que te la entregamos.</p>
+            </header>
+
+            <ol class="steps">
+                <li>
+                    <span class="step-num">01</span>
+                    <h3>Recepción</h3>
+                    <p>Agendas tu cita o llegas al taller. Abrimos una orden de servicio con los datos de tu unidad y las fallas que reportas.</p>
+                </li>
+                <li>
+                    <span class="step-num">02</span>
+                    <h3>Diagnóstico</h3>
+                    <p>Un mecánico la inspecciona, la revisa con escáner y hace pruebas mecánicas para encontrar la falla real.</p>
+                </li>
+                <li>
+                    <span class="step-num">03</span>
+                    <h3>Cotización</h3>
+                    <p>Te enviamos la cotización por correo o WhatsApp. <strong>El trabajo no empieza sin tu aprobación.</strong></p>
+                </li>
+                <li>
+                    <span class="step-num">04</span>
+                    <h3>Reparación y entrega</h3>
+                    <p>Reparamos, probamos la unidad y el jefe de taller la revisa. La entregamos con garantía por escrito y factura si la pides.</p>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ============ RESCATE CARRETERO ============ -->
+    <section id="rescate" class="rescue">
+        <div class="rescue-media">
+            <img src="./WhatsApp%20Image%202026-06-09%20at%203.37.51%20PM%20(4).jpeg" alt="Camión detenido a un lado de la carretera" loading="lazy">
+        </div>
+        <div class="rescue-body">
+            <span class="kicker kicker-light">Rescate carretero</span>
+            <h2>¿Te quedaste varado?</h2>
+            <p>Escríbenos con tu ubicación, el tipo de unidad y la falla. Si se puede resolver en el lugar, sale un mecánico con herramienta y las refacciones más probables.</p>
+            <ul class="check-list">
+                <li><i class="fa-solid fa-route"></i> Cobertura en un radio de 356 km</li>
+                <li><i class="fa-solid fa-house-chimney"></i> Servicio en taller, a domicilio y en carretera</li>
+                <li><i class="fa-solid fa-truck-arrow-right"></i> Si hace falta remolque, coordinamos la grúa (se cotiza aparte)</li>
+            </ul>
+            <a href="https://wa.me/5216122179060?text=Hola%2C%20necesito%20rescate%20carretero" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+                <i class="fa-brands fa-whatsapp"></i> Pedir rescate
+            </a>
+        </div>
+    </section>
+
+    <!-- ============ NOSOTROS ============ -->
+    <section id="nosotros" class="section about">
+        <div class="container about-grid">
+            <div class="about-media">
+                <img src="./WhatsApp%20Image%202026-06-09%20at%203.37.52%20PM.jpeg" alt="Camión rojo en el patio del taller junto a un cactus" class="about-main" loading="lazy">
+                <figure class="about-badge">
+                    <img src="./fotoprincipal.jpeg" alt="Integrante del taller en una exposición de transporte" loading="lazy">
+                    <figcaption>Siempre actualizados: visitamos expos del transporte.</figcaption>
+                </figure>
+            </div>
+
             <div class="about-text">
-                <span class="subtitle">Taller Diesel S.M</span>
-                <h2>Compromiso, Honestidad y Trayectoria Mecánica</h2>
-                <p>Fundado en 2019 en La Paz, Baja California Sur, <strong>Taller Diesel S.M</strong> nació con el firme propósito de ofrecer un servicio técnico confiable, transparente y altamente capacitado para el sector del transporte pesado y vehículos particulares diésel.</p>
-                <p>Nuestra mayor fortaleza radica en nuestro equipo técnico, liderado por un maestro mecánico con <strong>17 años de experiencia comprobada</strong>. Sabemos que tu vehículo es tu herramienta de trabajo; por ello, cada diagnóstico y reparación se realiza bajo estrictos estándares de calidad.</p>
-                <div class="about-features">
-                    <div class="feat-item"><i class="fa-solid fa-circle-check accent-color"></i> Precios justos y transparentes</div>
-                    <div class="feat-item"><i class="fa-solid fa-circle-check accent-color"></i> Trato directo y honesto</div>
-                    <div class="feat-item"><i class="fa-solid fa-circle-check accent-color"></i> Mano de obra garantizada</div>
+                <span class="kicker">Nosotros</span>
+                <h2>Un taller de La Paz, hecho para el transporte pesado</h2>
+                <p>
+                    <strong>Taller Diesel S.M.</strong> abrió en 2019 en la zona industrial de La Paz porque aquí hacía falta un servicio
+                    diésel confiable, transparente y bien capacitado. Desde entonces no hemos dejado de trabajar, y la mayoría de
+                    nuestros clientes llega por recomendación.
+                </p>
+                <p>
+                    Nuestra misión es resolver las fallas diésel, incluso las más complicadas, para que tus camiones y tu flotilla
+                    rindan mejor y duren más, con atención rápida y personalizada.
+                </p>
+
+                <div class="clients">
+                    <h3>A quién atendemos</h3>
+                    <ul class="chips">
+                        <li>Transportistas independientes</li>
+                        <li>Flotillas y empresas</li>
+                        <li>Mineras</li>
+                        <li>Constructoras</li>
+                        <li>Particulares con diésel</li>
+                    </ul>
                 </div>
             </div>
-            <div class="about-img-box">
-                <img src="./fotoprincipal.jpeg" alt="Mecánico trabajando" class="about-img">
+        </div>
+
+        <div class="container">
+            <div class="values">
+                <div class="value">
+                    <i class="fa-solid fa-handshake"></i>
+                    <h3>Honestidad</h3>
+                    <p>Diagnosticamos y cotizamos solo lo necesario, sin inflar reparaciones ni esconder fallas.</p>
+                </div>
+                <div class="value">
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <h3>Transparencia</h3>
+                    <p>Te explicamos qué se hizo, con qué piezas y a qué costo, con cotizaciones y facturas claras.</p>
+                </div>
+                <div class="value">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h3>Trabajos confiables</h3>
+                    <p>Unidades probadas antes de entregarse y con garantía por escrito.</p>
+                </div>
+                <div class="value">
+                    <i class="fa-solid fa-clock"></i>
+                    <h3>Puntualidad</h3>
+                    <p>Respetamos las citas y los tiempos de entrega que te damos.</p>
+                </div>
+            </div>
+
+            <div class="eco">
+                <div class="eco-icon"><i class="fa-solid fa-seedling"></i></div>
+                <div>
+                    <h3>Cuidamos el desierto de La Paz</h3>
+                    <p>
+                        Un recolector autorizado retira cada 30 días el aceite usado, los filtros y demás residuos, para que nada
+                        termine en el drenaje ni en el suelo. Dentro del taller cuidamos el agua, porque en Baja California Sur escasea.
+                        Y un motor bien afinado también contamina menos.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="contacto" class="contact-section">
+    <!-- ============ GALERÍA ============ -->
+    <section id="galeria" class="section gallery">
         <div class="container">
-            <div class="section-header">
-                <h2>Encuéntranos Fácilmente</h2>
-                <p>Visítanos en La Pitahaya o contáctanos por teléfono y WhatsApp.</p>
+            <header class="section-head">
+                <span class="kicker">Galería</span>
+                <h2>Trabajos del taller</h2>
+                <p>Toca cualquier foto para verla en grande.</p>
+            </header>
+
+            <div class="gallery-grid" id="galleryGrid">
+                <button class="g-item g-wide" type="button"><img src="./camionportada.jpeg" alt="Camión con el cofre abierto en el taller" loading="lazy"></button>
+                <button class="g-item" type="button"><img src="./camion1.jpeg" alt="Camión con el motor descubierto" loading="lazy"></button>
+                <button class="g-item" type="button"><img src="./WhatsApp%20Image%202026-06-09%20at%203.37.51%20PM%20(1).jpeg" alt="Motor diésel rojo instalado en camión" loading="lazy"></button>
+                <button class="g-item" type="button"><img src="./camion5.jpeg" alt="Mecánico trabajando en el motor de un camión" loading="lazy"></button>
+                <button class="g-item g-wide" type="button"><img src="./WhatsApp%20Image%202026-06-09%20at%203.37.50%20PM%20(2).jpeg" alt="Tractocamiones dentro del taller" loading="lazy"></button>
+                <button class="g-item" type="button"><img src="./WhatsApp%20Image%202026-06-09%20at%203.38.15%20PM%20(3).jpeg" alt="Camión con motor amarillo durante la instalación" loading="lazy"></button>
+                <button class="g-item" type="button"><img src="./WhatsApp%20Image%202026-06-09%20at%203.37.53%20PM%20(3).jpeg" alt="Camión naranja con el motor expuesto" loading="lazy"></button>
+                <button class="g-item" type="button"><img src="./WhatsApp%20Image%202026-06-09%20at%203.38.15%20PM%20(4).jpeg" alt="Cabeza de motor suspendida con cadenas" loading="lazy"></button>
+                <button class="g-item g-wide" type="button"><img src="./WhatsApp%20Image%202026-06-09%20at%203.37.53%20PM%20(2).jpeg" alt="Engranes de distribución de un motor diésel" loading="lazy"></button>
+                <button class="g-item" type="button"><img src="./camion3.jpeg" alt="Camioneta roja en el patio con cactus al fondo" loading="lazy"></button>
+                <button class="g-item" type="button"><img src="./WhatsApp%20Image%202026-06-09%20at%203.38.15%20PM%20(1).jpeg" alt="Caja de transmisión abierta" loading="lazy"></button>
+                <button class="g-item" type="button"><img src="./WhatsApp%20Image%202026-06-09%20at%203.37.51%20PM%20(2).jpeg" alt="Embrague y volante de motor" loading="lazy"></button>
+
+                <button class="g-item is-extra" type="button"><img src="./camion2.jpeg" alt="Camión de carga ligera en el taller" loading="lazy"></button>
+                <button class="g-item is-extra" type="button"><img src="./camion4.jpeg" alt="Tractocamión blanco en reparación" loading="lazy"></button>
+                <button class="g-item is-extra" type="button"><img src="./WhatsApp%20Image%202026-06-09%20at%203.37.50%20PM.jpeg" alt="Tractocamión con el motor descubierto" loading="lazy"></button>
+                <button class="g-item is-extra g-wide" type="button"><img src="./WhatsApp%20Image%202026-06-09%20at%203.37.50%20PM%20(1).jpeg" alt="Pantalla con códigos de falla del diagnóstico" loading="lazy"></button>
+                <button class="g-item is-extra" type="button"><img src="./WhatsApp%20Image%202026-06-09%20at%203.37.51%20PM.jpeg" alt="Laptop conectada a un camión para diagnóstico" loading="lazy"></button>
+                <button class="g-item is-extra" type="button"><img src="./WhatsApp%20Image%202026-06-09%20at%203.37.51%20PM%20(3).jpeg" alt="Costado de un tractocamión" loading="lazy"></button>
+                <button class="g-item is-extra" type="button"><img src="./WhatsApp%20Image%202026-06-09%20at%203.37.52%20PM%20(3).jpeg" alt="Camión de carga ligera de frente" loading="lazy"></button>
+                <button class="g-item is-extra" type="button"><img src="./WhatsApp%20Image%202026-06-09%20at%203.37.52%20PM%20(4).jpeg" alt="Carcasa de transmisión desmontada" loading="lazy"></button>
+                <button class="g-item is-extra" type="button"><img src="./WhatsApp%20Image%202026-06-09%20at%203.37.53%20PM%20(1).jpeg" alt="Camión con la cabina levantada" loading="lazy"></button>
+                <button class="g-item is-extra" type="button"><img src="./WhatsApp%20Image%202026-06-09%20at%203.37.53%20PM%20(4).jpeg" alt="Tractocamión azul" loading="lazy"></button>
+                <button class="g-item is-extra" type="button"><img src="./WhatsApp%20Image%202026-06-09%20at%203.37.54%20PM.jpeg" alt="Motor diésel en exhibición en una expo" loading="lazy"></button>
             </div>
-            
-            <div class="grid-2">
-                <div class="contact-info-card">
-                    <h3>Información del Taller</h3>
-                    <div class="info-link-group">
-                        <div class="info-item">
-                            <i class="fa-solid fa-location-dot accent-color"></i>
+
+            <div class="gallery-more">
+                <button class="btn btn-outline" id="galleryMore" type="button">
+                    <i class="fa-solid fa-images"></i> Ver más fotos
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CONTACTO Y MAPA ============ -->
+    <section id="contacto" class="section contact">
+        <div class="container">
+            <header class="section-head">
+                <span class="kicker">Contacto</span>
+                <h2>Visítanos en La Pitahaya</h2>
+                <p>Estamos en la zona industrial de La Paz, en terreno propio y con espacio para unidades grandes.</p>
+            </header>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <ul class="contact-list">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
                             <div>
-                                <strong>Dirección:</strong>
-                                <p>C. Balsamina entre Calle Caddebi, COLONIA LA PITAHAYA, CP 23089, La Paz, B.C.S.</p>
+                                <strong>Dirección</strong>
+                                <p>C. Balsamina entre Calle Caddebi, Col. La Pitahaya, C.P. 23089, La Paz, B.C.S.</p>
                             </div>
-                        </div>
-                        <div class="info-item">
-                            <i class="fa-solid fa-phone accent-color"></i>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-whatsapp"></i>
                             <div>
-                                <strong>Teléfono / WhatsApp:</strong>
+                                <strong>Teléfono y WhatsApp</strong>
                                 <p><a href="tel:+5216122179060">+52 1 612 217 9060</a></p>
                             </div>
-                        </div>
-                        <div class="info-item">
-                            <i class="fa-solid fa-envelope accent-color"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
                             <div>
-                                <strong>Correo Electrónico:</strong>
+                                <strong>Correo (cotizaciones)</strong>
                                 <p><a href="mailto:Taniamatuz19@gmail.com">Taniamatuz19@gmail.com</a></p>
                             </div>
-                        </div>
-                        <div class="info-item">
-                            <i class="fa-solid fa-clock accent-color"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-clock"></i>
                             <div>
-                                <strong>Horario de Atención:</strong>
-                                <p>Lunes a Sábado: 8:00 AM a 6:00 PM</p>
+                                <strong>Horario</strong>
+                                <p>Lunes a sábado, de 8:00 a 18:00<br>Domingo: cerrado</p>
                             </div>
-                        </div>
-                        <div class="info-item">
-                            <i class="fa-solid fa-money-bill-wave accent-color"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-money-bill-transfer"></i>
                             <div>
-                                <strong>Métodos de Pago:</strong>
-                                <p>Efectivo y Transferencias Bancarias</p>
+                                <strong>Pago</strong>
+                                <p>Efectivo y transferencia bancaria. Factura disponible si la solicitas.</p>
                             </div>
-                        </div>
+                        </li>
+                    </ul>
+
+                    <div class="contact-actions">
+                        <a href="https://wa.me/5216122179060" target="_blank" rel="noopener" class="btn btn-primary">
+                            <i class="fa-brands fa-whatsapp"></i> Escríbenos
+                        </a>
+                        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=24.07088483466293,-110.32552189088518" target="_blank" rel="noopener" class="btn btn-outline">
+                            <i class="fa-solid fa-diamond-turn-right"></i> Abrir en Google Maps
+                        </a>
                     </div>
                 </div>
 
                 <div class="map-card">
-                    <h3>Nuestra Ubicación en el Mapa</h3>
-                    <div class="map-wrapper">
-                        <iframe 
-                            src="https://maps.google.com/maps?q=24.07088483466293,-110.32552189088518&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-                            width="100%" 
-                            height="100%" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                    </div>
+                    <iframe
+                        title="Ubicación de Taller Diesel S.M. en Google Maps"
+                        src="https://maps.google.com/maps?q=24.07088483466293,-110.32552189088518&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                        width="100%"
+                        height="100%"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="main-footer">
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <img src="./logo.png" alt="Logo de Taller Diesel S.M." width="72" height="72" loading="lazy">
+                <div>
+                    <p class="footer-name">Taller Diesel S.M.</p>
+                    <p class="footer-slogan">Diagnóstico honesto, motor confiable.</p>
+                </div>
+            </div>
+            <nav class="footer-links" aria-label="Enlaces del pie de página">
+                <a href="#servicios">Servicios</a>
+                <a href="#proceso">Cómo trabajamos</a>
+                <a href="#rescate">Rescate carretero</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#galeria">Galería</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+            <div class="footer-contact">
+                <p><i class="fa-solid fa-phone"></i> <a href="tel:+5216122179060">612 217 9060</a></p>
+                <p><i class="fa-solid fa-location-dot"></i> La Pitahaya, La Paz, B.C.S.</p>
+                <p><i class="fa-solid fa-clock"></i> Lun a sáb, 8:00 a 18:00</p>
+            </div>
+        </div>
         <div class="container footer-bottom">
-            <p>© 2026 Taller Diesel S.M. Todos los derechos reservados.</p>
-            <p>La Paz, Baja California Sur</p>
+            <p>© <span id="year">2026</span> Taller Diesel S.M. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <a href="https://wa.me/5216122179060" target="_blank" class="whatsapp-float" title="Escríbenos por WhatsApp">
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/5216122179060" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Escríbenos por WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
+    <!-- Visor de fotos -->
+    <div class="lightbox" id="lightbox" hidden>
+        <button class="lb-btn lb-close" id="lbClose" aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button>
+        <button class="lb-btn lb-prev" id="lbPrev" aria-label="Foto anterior"><i class="fa-solid fa-chevron-left"></i></button>
+        <img id="lbImg" src="" alt="">
+        <button class="lb-btn lb-next" id="lbNext" aria-label="Foto siguiente"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
